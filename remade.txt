@@ -1,0 +1,209 @@
+# BEGANet: Synergistic Boundary Enhancement and Adaptive Gating for Multi-Modal Salient Object Detection
+
+Official PyTorch implementation of **BEGANet** for RGB-D and RGB-T Salient Object Detection (SOD).
+
+---
+
+## 📌 Overview
+
+This repository provides the implementation of **BEGANet**, a unified framework for multi-modal salient object detection. The proposed method integrates:
+
+* **Contextual Boundary Enhancement Module (CBEM)** for explicit boundary modeling
+* **Enhanced Dynamic Gate (EDG)** for adaptive multi-modal fusion
+* **Learnable Upsampling Decoder** for fine-grained spatial reconstruction
+
+BEGANet achieves state-of-the-art performance on multiple RGB-D and RGB-T benchmark datasets.
+
+---
+
+## 🔥 Highlights
+
+* ✅ Boundary-aware feature learning
+* ✅ Adaptive RGB-Depth/Thermal fusion
+* ✅ Lightweight and efficient architecture
+* ✅ Strong generalization across datasets
+
+---
+
+## 📂 Repository Structure
+
+```
+BEGANet/
+│── data/                 # Dataset folder (user-provided)
+│── models/               # Network architecture
+│── checkpoints/          # Pretrained models
+│── utils/                # Helper functions
+│── train.py              # Training script
+│── test.py               # Evaluation script
+│── config.py             # Configuration file
+│── requirements.txt      # Dependencies
+```
+
+---
+
+## ⚙️ Requirements
+
+* Python 3.8
+* PyTorch 1.8.1
+* CUDA 11.1
+* OpenCV 4.5
+
+Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+## 📊 Datasets
+
+### RGB-D Datasets
+
+* NJU2K
+* NLPR
+* DUT
+* SIP
+* LFSD
+* STERE
+
+### RGB-T Datasets
+
+* VT5000
+* VT821
+* VT1000
+
+### 📥 Dataset Preparation
+
+Download datasets and organize them as follows:
+
+```
+data/
+│── NJU2K/
+│── NLPR/
+│── DUT/
+│── SIP/
+│── LFSD/
+│── STERE/
+│── VT5000/
+│── VT821/
+│── VT1000/
+```
+
+> ⚠️ Note: Dataset download links are available from official dataset websites.
+
+---
+
+## 🚀 Training
+
+To train BEGANet:
+
+```
+python train.py
+```
+
+Or specify GPU:
+
+```
+CUDA_VISIBLE_DEVICES=0 python train.py
+```
+
+---
+
+## 🧪 Testing
+
+To evaluate the model:
+
+```
+python test.py
+```
+
+---
+
+## 📦 Pretrained Models
+
+Download pretrained models from:
+
+👉 [Google Drive / Baidu / HuggingFace Link]
+
+Place them in:
+
+```
+checkpoints/
+```
+
+---
+
+## 🔁 Reproducibility
+
+To reproduce the results reported in the paper:
+
+1. Download datasets
+2. Download pretrained models
+3. Run:
+
+```
+python test.py
+```
+
+All evaluation metrics (MAE, F-measure, E-measure) will be automatically computed.
+
+---
+
+## 📈 Results
+
+BEGANet achieves:
+
+* **Up to 15.4% MAE reduction**
+* **Up to 5.5% F-measure improvement**
+
+across multiple RGB-D and RGB-T datasets.
+
+---
+
+## 🧩 Key Components
+
+### CBEM
+
+Enhances boundary awareness and improves structural consistency.
+
+### EDG
+
+Adaptively balances multi-modal contributions.
+
+### Learnable Upsampling
+
+Recovers fine spatial details beyond fixed interpolation.
+
+---
+
+## 📄 Citation
+
+If you find this work useful, please cite:
+
+```
+@article{BEGANet2026,
+  title={BEGANet: Synergistic Boundary Enhancement and Adaptive Gating for Multi-Modal Salient Object Detection},
+  author={Hu, Yunfei and others},
+  journal={The Visual Computer},
+  year={2026}
+}
+```
+
+---
+
+## 📢 Notes
+
+* This repository is the official implementation corresponding to our submitted manuscript.
+* Please cite our paper when using this code.
+
+---
+
+## 📬 Contact
+
+For questions, please contact:
+
+Yunfei Hu
+Email: [your email]
+
+---
